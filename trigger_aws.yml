@@ -21,6 +21,7 @@ phases:
       - avm $APPIUM_VERSION
       - ln -s /usr/local/avm/versions/$APPIUM_VERSION/node_modules/.bin/appium  /usr/local/avm/versions/$APPIUM_VERSION/node_modules/appium/bin/appium.js
   # The pre-test phase includes commands that setup your test environment.
+
   pre_test:
     commands:
       # We recommend starting appium server process in the background using the command below.

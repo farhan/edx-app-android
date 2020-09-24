@@ -55,6 +55,7 @@ phases:
             fi;
         done;
   # The test phase includes commands that run your test suite execution.
+
   test:
     commands:
       # Your test package is downloaded in $DEVICEFARM_TEST_PACKAGE_PATH so we first change directory to that path.

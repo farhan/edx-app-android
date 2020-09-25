@@ -217,10 +217,6 @@ def schedule_run(project_arn, name, device_pool_arn, app_arn,
               'testSpecArn': test_specs_arn
               },
     )
-    print("++++++++++++++++++++++++++++++++++++++++++++++")
-    print(str(schedule_run_result))
-    print(str(schedule_run_result['run']))
-    print("++++++++++++++++++++++++++++++++++++++++++++++")
     run_arn = schedule_run_result['run']['arn']
 
     test_run = device_farm.get_run(arn=run_arn)
@@ -253,9 +249,6 @@ def get_test_run(run_arn):
         run = str(get_run_details['run'])
         if run_status in RUN_COMPLETED_STATUS:
             print('Run is {} with {} result'.format(run_status, run_result))
-            print("++++++++++++++++++++++++++++++++++++++++++++++")
-            print(run)
-            print("++++++++++++++++++++++++++++++++++++++++++++++")
             break
         print('{} - Waiting for run to finish, currently in {} status with {} result '.format(
             wait_try,

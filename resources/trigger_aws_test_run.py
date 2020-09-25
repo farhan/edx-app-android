@@ -246,7 +246,6 @@ def get_test_run(run_arn):
         get_run_details = device_farm.get_run(arn=run_arn)
         run_status = get_run_details['run']['status']
         run_result = get_run_details['run']['result']
-        run = str(get_run_details['run'])
         if run_status in RUN_COMPLETED_STATUS:
             print('Run is {} with {} result'.format(run_status, run_result))
             break

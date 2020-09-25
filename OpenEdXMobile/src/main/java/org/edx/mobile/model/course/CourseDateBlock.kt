@@ -7,12 +7,13 @@ import org.edx.mobile.util.DateUtil
 data class CourseDateBlock(
         @SerializedName("complete") var complete: Boolean = false,
         @SerializedName("date") val date: String = "",
+        @SerializedName("assignment_type") val assignmentType: String? = "",
         @SerializedName("date_type") var dateType: String? = "",
         @SerializedName("description") val description: String = "",
         @SerializedName("learner_has_access") var learnerHasAccess: Boolean = false,
         @SerializedName("link") val link: String = "",
         @SerializedName("link_text") val linkText: String = "",
-        @SerializedName("title") val title: String = "",
+        @SerializedName("title") val title: String? = "",
         // Local property to assign a badge to a date block according to desired result
         var dateBlockBadge: CourseDateType = CourseDateType.BLANK
 
